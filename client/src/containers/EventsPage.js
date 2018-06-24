@@ -31,6 +31,7 @@ class EventsPage extends Component {
   }
   
   function mapStateToProps(state){
+    console.log(state.events);
     return {events: state.events}
   }
   
