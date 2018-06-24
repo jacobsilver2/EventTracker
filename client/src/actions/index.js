@@ -1,3 +1,4 @@
+import { resetEventForm } from './eventForm';
 const api_URL = 'http://localhost:3001/api'
 
 //Event Action Creators
@@ -57,6 +58,7 @@ export const createEvent = (event, routerHistory) => {
     .then(response => response.json())
     .then(event => {
       dispatch(addEvent(event))
+      dispatch(resetRecipeForm())
       routerHistory.replace(`/events/${event.id}`)
     })
     .catch(error => {
