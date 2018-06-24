@@ -1,4 +1,4 @@
-const api_URL = 'http://localhost:3001/api/v1'
+const api_URL = 'http://localhost:3001/api'
 
 //Event Action Creators
 export const setEvents = events => {
