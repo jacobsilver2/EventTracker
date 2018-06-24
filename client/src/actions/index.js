@@ -94,8 +94,8 @@ export const deleteEvent = (eventId, routerHistory) => {
       method: 'DELETE',
     })
     .then(response => {
-      routerHistory.replace('/events');
       dispatch(removeEvent(eventId));
+      routerHistory.replace('/events');
     })
     .catch(error => console.log(error))
   }
