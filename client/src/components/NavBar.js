@@ -10,7 +10,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink style={{marginRight : '10px'}} to="/events" >
             Events
-            <span className="glyphicon glyphicon-tree-conifer"></span>
+            <span className="glyphicon glyphicon glyphicon-sunglasses"></span>
         </NavLink>
         <NavLink style={{marginRight : '10px'}} to="/events/new" >
             Add Event
