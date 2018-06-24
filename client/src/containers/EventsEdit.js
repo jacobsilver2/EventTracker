@@ -52,7 +52,7 @@ render() {
 
 const mapStateToProps = (state, ownProps) => {
   
-  let id = ownProps.match.params.showId;
+  
   let event = state.events.events.find(event => event.id === +ownProps.match.params.showId)
   return {event}
 }

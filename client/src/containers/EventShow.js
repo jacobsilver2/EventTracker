@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Button, ButtonGroup, Image } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 //actions
 import { deleteEvent} from '../actions'
 
@@ -13,7 +13,7 @@ class EventShow extends Component {
     // }
 
     render() {
-        const { event, match, history } = this.props;
+        const { event, history } = this.props;
         
         return (
             <div className="container-fluid text-center">

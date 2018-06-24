@@ -9,11 +9,12 @@ export default (state={events: [] }, action) => {
       case 'EDIT_EVENT':
         state.events.map((event) => {
           if (event.id === action.event.id) {
-            event.title = action.event.title
+            event.name = action.event.name
+            event.location = action.event.location
           }
+        return {...state, event: action.event};
         });
-      return {...state, event: action.event};
       default:
-          return state
+        return state
     }
   }
