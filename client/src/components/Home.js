@@ -1,5 +1,5 @@
 import React from 'react';
-import EventsPage from '../containers/EventsPage'
+
 
 const Home = () => {
     return (
