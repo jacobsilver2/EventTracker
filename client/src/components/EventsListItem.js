@@ -10,7 +10,7 @@ class EventsListItem extends Component {
       <div className="col-sm-4" style={{marginTop: '30px'}}>
         <div className="container-fluid text-center">
           <h3>
-            <Link key={this.props.event.id} to={`/events/${this.props.event.id}`}>{this.props.event.title}</Link>
+            <Link key={this.props.event.id} to={`/events/${this.props.event.id}`}>{this.props.event.name}</Link>
           </h3>
         </div>
       

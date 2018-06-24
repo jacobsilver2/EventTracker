@@ -12,6 +12,7 @@ import EventsPage from '../containers/EventsPage';
 import { getEvents } from '../actions/index';
 
 class App extends Component {
+
   componentDidMount() {
     this.props.getEvents()
   }

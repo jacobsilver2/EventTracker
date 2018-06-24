@@ -17,7 +17,7 @@ class EventShow extends Component {
         
         return (
             <div className="container-fluid text-center">
-                <h1>{event.title}</h1>
+                <h1>{event.name}</h1>
             
                 <ButtonGroup>
                     <Button 
