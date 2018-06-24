@@ -58,7 +58,7 @@ export const createEvent = (event, routerHistory) => {
     .then(response => response.json())
     .then(event => {
       dispatch(addEvent(event))
-      dispatch(resetRecipeForm())
+      dispatch(resetEventForm())
       routerHistory.replace(`/events/${event.id}`)
     })
     .catch(error => {
