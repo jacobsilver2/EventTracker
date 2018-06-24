@@ -31,3 +31,5 @@ module EventManager
     config.api_only = true
   end
 end
+
+
