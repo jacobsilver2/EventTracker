@@ -38,7 +38,7 @@ class EventShow extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    
+    debugger;
     const id = +ownProps.match.params.showId
     const event = state.events.events.find(event => event.id === id) || {}
     

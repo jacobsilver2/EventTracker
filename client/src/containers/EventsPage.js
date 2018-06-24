@@ -1,16 +1,22 @@
 //dependencies
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 //components
 import EventsList from '../components/EventsList'
 //containers
 import EventsNew from './EventsNew'
 import EventShow from  './EventShow'
 import EventsEdit from './EventsEdit'
+//actions
+import { getEvents} from '../actions/index'
 
 
 class EventsPage extends Component {
+
+  componentDidMount() {
+    this.props.getEvents()
+  }
 
     render() {
       const { events, match } = this.props;
@@ -30,9 +36,10 @@ class EventsPage extends Component {
     }
   }
   
-  function mapStateToProps(state){
-    console.log(state.events);
-    return {events: state.events}
-  }
+const mapStateToProps = (state) => {
+  return ({
+    events: state.events
+  })
+}
   
-  export default connect(mapStateToProps, null)(EventsPage);
+  export default connect(mapStateToProps, {getEvents})(EventsPage);
