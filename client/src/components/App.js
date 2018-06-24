@@ -1,11 +1,15 @@
+// dependencies
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './home';
-import EventsPage from '../containers/EventsPage';
-import Home from '../components/home';
-import { getEvents } from '../actions/index';
 import { connect } from 'react-redux';
+import './App.css';
+// components
+import NavBar from './NavBar';
+import Home from './Home';
+//containers
+import EventsPage from '../containers/EventsPage';
+//actions
+import { getEvents } from '../actions/index';
 
 class App extends Component {
   componentDidMount() {
