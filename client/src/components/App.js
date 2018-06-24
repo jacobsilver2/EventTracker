@@ -1,7 +1,7 @@
 // dependencies
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import './App.css';
 // components
 import NavBar from './NavBar';
@@ -9,7 +9,7 @@ import Home from './Home';
 //containers
 import EventsPage from '../containers/EventsPage';
 //actions
-import { getEvents } from '../actions/index';
+import {getEvents} from '../actions/index'
 
 class App extends Component {
 
@@ -32,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, {getEvents})(App)
+export default connect(null, {getEvents})(App);

@@ -14,13 +14,12 @@ import { getEvents} from '../actions/index'
 
 class EventsPage extends Component {
 
-  componentDidMount() {
-    this.props.getEvents()
-  }
+  // componentDidMount() {
+  //   this.props.getEvents()
+  // }
 
     render() {
       const { events, match } = this.props;
-      
       return(
         <div className="container">
           <Switch>
@@ -42,4 +41,4 @@ const mapStateToProps = (state) => {
   })
 }
   
-  export default connect(mapStateToProps, {getEvents})(EventsPage);
+  export default connect(mapStateToProps, null)(EventsPage);

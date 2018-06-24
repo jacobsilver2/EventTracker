@@ -38,12 +38,14 @@ class EventShow extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    debugger;
-    const id = +ownProps.match.params.showId
-    const event = state.events.events.find(event => event.id === id) || {}
+    // debugger
+
+    const id = +ownProps.match.params.showId;
+    const event = state.events.events.find(event => event.id === id) || {};
     
     return {
-        event: event}
+        event: event
     }
+}
 
 export default connect(mapStateToProps, {deleteEvent})(EventShow);
