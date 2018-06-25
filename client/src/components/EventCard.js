@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles'
 import ProfilePicture from './ProfilePicture'
 import DetailsRow from './DetailsRow'
+import Moment from 'react-moment';
 
 const EventCard = (props) => (
 	<div style={{ position: 'absolute', top: 0 }} onClick={props.onClick}>
@@ -16,18 +17,20 @@ const EventCard = (props) => (
 		<div style={{color: '#fff'}}>
 			<DetailsRow
 				icon='ion-ios-telephone-outline'
-				title={props.mobileNo}
+				title={<Moment format="dddd, MMMM Do">{props.date}</Moment>}
+        name = "Date"
 			/>
 
 			<DetailsRow
 				icon='ion-ios-location-outline'
-				title={props.location}
+				title={<Moment format="h:mm a">{props.time}</Moment>}
+        name = "Time"
 			/>
 
 			<DetailsRow
 				icon='icon ion-ios-paper-outline'
-				title='Main Role'
-				summary={props.role}
+				title={props.location}
+        name = "Location"
 			/>
 		</div>
   </div>
