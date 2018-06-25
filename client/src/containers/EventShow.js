@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button, ButtonGroup } from 'react-bootstrap';
+import Moment from 'react-moment';
 //actions
 import { deleteEvent} from '../actions'
 
@@ -17,8 +18,8 @@ class EventShow extends Component {
             <div className="container-fluid text-center">
                 <h1>Name: {event.name}</h1>
                 <h1>Location: {event.location}</h1>
-                <h1>Date: {event.date}</h1>
-                <h1>Time: {event.time}</h1>
+                <h1>Date: <Moment format="dddd, MMMM Do">{event.date}</Moment></h1>
+                <h1>Time: <Moment format="h:mm a">{event.time}</Moment></h1>
             
                 <ButtonGroup>
                     <Button className="btn btn-outline-danger" onClick={() => this.props.deleteEvent(event.id, history) }>
