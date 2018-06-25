@@ -1,12 +1,13 @@
 import React from 'react';
 
-const About = () => {
+
+const Contact = () => {
   return (
-    <div className="about">
-      <h1>About</h1>
-      <h3>EventTracker was created to help you, the user, manage all the events you plan on attending.</h3>
+    <div className="contact">
+      <h1>Contact Us</h1>
+      <h3>Please get in touch! Please don't call. Or email.  Figure out some other way.  Ask a friend?</h3>
     </div>
   )
 }
 
-export default About;
+export default Contact;
