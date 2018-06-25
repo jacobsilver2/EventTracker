@@ -1,5 +1,5 @@
 //dependencies
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 //reducers
@@ -13,10 +13,9 @@ const reducers = combineReducers({
     errors: Errors
 });
 
-const middleware = [thunk]
+// const middleware = [thunk]
 
 export default createStore(
     reducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(...middleware)   
+    applyMiddleware(thunk)
 )

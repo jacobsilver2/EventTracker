@@ -69,7 +69,7 @@ export const createEvent = (event, routerHistory) => {
 }
 
 export const editEvent = (event, routerHistory) => {
-   dispatch => {
+   return dispatch => {
     return fetch(`${api_URL}/events/${event.id}`, {
       method: "PATCH",
       headers: {
@@ -80,8 +80,8 @@ export const editEvent = (event, routerHistory) => {
     .then(handleErrors)
     .then(response => response.json())
     .then(event => {
-      dispatch(updateEvent(event))
       routerHistory.replace(`/events/${event.id}`)
+       dispatch(updateEvent(event))
     })
     .catch(error => {
       dispatch({type: 'error'})

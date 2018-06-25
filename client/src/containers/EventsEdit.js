@@ -18,17 +18,17 @@ handleOnChange = e => {
   });
 }
 
-// handleOnSubmit = e => {
-//   e.preventDefault();
-//   const { editEvent, history } = this.props;
-//   this.props.editEvent(this.state, history);
-// }
+handleOnSubmit = e => {
+  e.preventDefault();
+  const { editEvent, history } = this.props;
+  editEvent(this.state, history);
+}
 
 render() {
-  const { event, history } = this.props;
+  
   return(
     <div className="container-fluid text-center">
-      <form style={{marginTop: '16px'}} onSubmit={() => this.props.editEvent(event, history)}>
+      <form style={{marginTop: '16px'}} onSubmit={this.handleOnSubmit}>
         <label>
           Name: <br></br>
             <input 
@@ -50,10 +50,10 @@ render() {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
-  let id = parseInt(ownProps.match.params.showId)
+  
+  let id = parseInt(ownProps.match.params.showId, 10)
   let event = state.events.events.find(event => event.id === id)
-  return {event}
+  return { event: event}
 }
 
 export default connect(mapStateToProps, {editEvent})(EventsEdit)
