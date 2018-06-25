@@ -6,7 +6,7 @@ import DetailsRow from './DetailsRow'
 const EventCard = (props) => (
 	<div style={{ position: 'absolute', top: 0 }} onClick={props.onClick}>
 		<header style={styles.cardHeader} className='card-header-details'>
-			<ProfilePicture imgSrc={props.imgSrc} borderColor={props.imgBorderColor} />
+			<ProfilePicture imgSrc={props.image} borderColor={props.imgBorderColor} />
 			<div>
 				<h1 style={styles.headerName}>{props.name}</h1>
 				<h3 style={styles.headerTitle} className='icon ion-ios-arrow-down'>{props.title}</h3>

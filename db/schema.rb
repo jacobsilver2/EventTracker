@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625212247) do
+ActiveRecord::Schema.define(version: 20180625214915) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180625212247) do
     t.time "time"
     t.string "image"
     t.string "background"
+    t.string "bordercolor"
   end
 
 end
