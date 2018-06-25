@@ -17,6 +17,8 @@ const EventsList = ({ events }) => {
   )
 
   return (
+    <div>
+    <div className="col-sm"></div>
     <div className="col-sm">
       <CardStack
         height={500}
@@ -31,8 +33,11 @@ const EventsList = ({ events }) => {
         )} 
                      
       </CardStack>
+    </div>
+    <div className="col-sm">
       {renderEvents}
       <Route path={`/events/:id`} component={EventShow} />
+    </div>  
     </div>
     )}
 

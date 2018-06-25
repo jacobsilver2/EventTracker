@@ -18,7 +18,8 @@ gem 'puma', '~> 3.7'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'random_images', '~> 0.0.6'
+gem 'image_suckr'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

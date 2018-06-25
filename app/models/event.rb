@@ -6,6 +6,9 @@ class Event < ApplicationRecord
   
   def set_image
     self.image = Pictures[rand(Pictures.length)]
+    # self.image = RandomImages::Image.get
+    # suckr = ImageSuckr::GoogleSuckr.new
+    # self.image = suckr.get_image_url
   end
 
   def set_background
