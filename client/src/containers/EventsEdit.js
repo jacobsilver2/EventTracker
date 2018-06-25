@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 class EventsEdit extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       id: props.event.id,
       name: props.event.name
@@ -18,16 +18,17 @@ handleOnChange = e => {
   });
 }
 
-handleOnSubmit = e => {
-  e.preventDefault();
-  const { editEvent, history } = this.props;
-  editEvent(this.state, history);
-}
+// handleOnSubmit = e => {
+//   e.preventDefault();
+//   const { editEvent, history } = this.props;
+//   this.props.editEvent(this.state, history);
+// }
 
 render() {
+  const { event, history } = this.props;
   return(
     <div className="container-fluid text-center">
-      <form style={{marginTop: '16px'}} onSubmit={this.handleOnSubmit}>
+      <form style={{marginTop: '16px'}} onSubmit={() => this.props.editEvent(event, history)}>
         <label>
           Name: <br></br>
             <input 
@@ -46,12 +47,12 @@ render() {
     </div>
   )
 }
-
-
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let event = state.events.events.find(event => event.id === +ownProps.match.params.showId)
+  debugger;
+  let id = parseInt(ownProps.match.params.showId)
+  let event = state.events.events.find(event => event.id === id)
   return {event}
 }
 
