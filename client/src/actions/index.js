@@ -69,7 +69,7 @@ export const createEvent = (event, routerHistory) => {
 }
 
 export const editEvent = (event, routerHistory) => {
-  return dispatch => {
+   dispatch => {
     return fetch(`${api_URL}/events/${event.id}`, {
       method: "PATCH",
       headers: {
@@ -96,8 +96,8 @@ export const deleteEvent = (eventId, routerHistory) => {
       method: 'DELETE',
     })
     .then(response => {
-      dispatch(removeEvent(eventId));
       routerHistory.replace('/events');
+      dispatch(removeEvent(eventId));
     })
     .catch(error => console.log(error))
   }
