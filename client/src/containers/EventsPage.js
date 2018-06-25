@@ -14,10 +14,6 @@ import { getEvents} from '../actions/index'
 
 class EventsPage extends Component {
 
-  // componentDidMount() {
-  //   this.props.getEvents()
-  // }
-
     render() {
       const { events, match } = this.props;
       return(

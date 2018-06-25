@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
+import Footer from './Footer'
 
 //css
 import './App.css';
@@ -32,6 +33,7 @@ class App extends Component {
             <Route exact path='/about' component={About}/>
             <Route exact path='/contact' component={Contact}/>
           </Switch>
+      <Footer />
         </div>
       </Router>
     );
