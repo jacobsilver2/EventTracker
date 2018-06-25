@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 //components
 import EventsList from '../components/EventsList'
+import ProfilePicture from '../components/ProfilePicture';
+import DetailsRow from '../components/DetailsRow';
+
 //containers
 import EventsNew from './EventsNew'
 import EventShow from  './EventShow'
