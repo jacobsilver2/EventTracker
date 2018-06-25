@@ -10,23 +10,21 @@ class EventsNew extends Component {
     this.state = {
       name: '',
       location: '',
-      date: ''
+      date: '',
+      time: ''
     }
   }
   
 
   handleOnChange = e => {
-    // console.log("handle on change is firing");
     this.setState({
       [e.target.name]: e.target.value
     });
-    // console.log(this.state);
   }
 
   handleOnSubmit = e => {
     e.preventDefault();
     const { createEvent, history } = this.props;
-    // console.log(createEvent);
     createEvent(this.state, history);
   }
 
@@ -64,6 +62,17 @@ class EventsNew extends Component {
               name="date"
               placeholder="Event Date"
               value={this.state.date}
+              onChange={this.handleOnChange}
+            />
+          </label><br></br>
+          <label>
+            Time: <br></br>
+            <input
+              className="form-control"
+              type="time"
+              name="time"
+              placeholder="Event Time"
+              value={this.state.time}
               onChange={this.handleOnChange}
             />
           </label><br></br>

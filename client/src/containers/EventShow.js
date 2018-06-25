@@ -18,10 +18,11 @@ class EventShow extends Component {
                 <h1>Name: {event.name}</h1>
                 <h1>Location: {event.location}</h1>
                 <h1>Date: {event.date}</h1>
+                <h1>Time: {event.time}</h1>
             
                 <ButtonGroup>
                     <Button className="btn btn-outline-danger" onClick={() => this.props.deleteEvent(event.id, history) }>
-                        <span className="glyphicon glyphicon-pencil"></span> Delete Event
+                        <span className="glyphicon glyphicon-remove-circle"></span> Delete Event
                     </Button>
 
                     <Button className="btn btn-outline-secondary">
