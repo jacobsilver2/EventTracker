@@ -25,7 +25,8 @@ handleOnSubmit = e => {
 }
 
 render() {
-  
+
+  const { event, history } = this.props;
   return(
     <div className="container-fluid text-center">
       <form style={{marginTop: '16px'}} onSubmit={this.handleOnSubmit}>

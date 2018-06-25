@@ -15,7 +15,8 @@ class EventShow extends Component {
         
         return (
             <div className="container-fluid text-center">
-                <h1>{event.name}</h1>
+                <h1>Name: {event.name}</h1>
+                <h1>Location: {event.location}</h1>
             
                 <ButtonGroup>
                     <Button className="btn btn-outline-danger" onClick={() => this.props.deleteEvent(event.id, history) }>

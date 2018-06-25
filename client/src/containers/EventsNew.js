@@ -44,6 +44,17 @@ class EventsNew extends Component {
               onChange={this.handleOnChange}
             />
           </label><br></br>
+          <label>
+            Location: <br></br>
+            <input
+              className="form-control"
+              type="text"
+              name="location"
+              placeholder="Event Location"
+              value={this.state.location}
+              onChange={this.handleOnChange}
+            />
+          </label><br></br>
           <Button className="btn btn-outline-primary" type="submit">
             <span className="glyphicon glyphicon-ok"></span>
             Add Event

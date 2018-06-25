@@ -13,12 +13,17 @@ const EventsList = ({ events }) => {
     <EventsListItem event={event} key={event.id}/>
   )
 
-  return (
+  if ( events === [] ) {
+    return (
+      <h3>No events in the database</h3>
+    )
+  } else {
+    return (
     <div className="col-sm">
       {renderEvents}
     <Route path={`/events/:id`} component={EventShow} />
     </div>
-  )
+    )}
 };
 
 export default EventsList;

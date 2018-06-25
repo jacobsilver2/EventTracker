@@ -6,6 +6,7 @@ import './App.css';
 // components
 import NavBar from './NavBar';
 import Home from './Home';
+import About from './about';
 //containers
 import EventsPage from '../containers/EventsPage';
 //actions
@@ -25,6 +26,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/events" component={EventsPage}/>
+            <Route exact path='/about' component={About}/>
           </Switch>
         </div>
       </Router>
