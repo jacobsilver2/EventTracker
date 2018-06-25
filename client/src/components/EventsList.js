@@ -25,7 +25,7 @@ const EventsList = ({ events }) => {
         hoverOffset={25}>
 
         {events.events.map((event, i) => 
-          <Card key={i}>
+          <Card key={i} background={event.background}>
             <EventCard {...event}/>
             </Card>
         )} 
