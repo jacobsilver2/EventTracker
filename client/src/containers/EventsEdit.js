@@ -8,13 +8,15 @@ class EventsEdit extends Component {
     super(props);
     this.state = {
       id: props.event.id,
-      name: props.event.name
+      name: props.event.name,
+      location: props.event.location,
+      date: props.event.date
     }
   }
 
 handleOnChange = e => {
   this.setState({
-    name: e.target.value
+    [e.target.name]: e.target.value
   });
 }
 
@@ -28,6 +30,7 @@ render() {
 
   const { event, history } = this.props;
   return(
+
     <div className="container-fluid text-center">
       <form style={{marginTop: '16px'}} onSubmit={this.handleOnSubmit}>
         <label>
@@ -40,6 +43,27 @@ render() {
               onChange={this.handleOnChange}
             />
         </label><br></br>
+        <label>
+          Location: <br></br>
+            <input 
+              className="form-control"
+              type="text"
+              name="location"
+              value={this.state.location}
+              onChange={this.handleOnChange}
+            />
+        </label><br></br>
+        <label>
+          Date: <br></br>
+            <input 
+              className="form-control"
+              type="date"
+              name="date"
+              value={this.state.date}
+              onChange={this.handleOnChange}
+            />
+        </label><br></br>
+
         <Button className="btn btn-outline-primary" type="submit">
           <span className="glyphicon glyphicon-ok"></span> Update Event 
         </Button>

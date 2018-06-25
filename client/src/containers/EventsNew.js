@@ -9,7 +9,8 @@ class EventsNew extends Component {
 
     this.state = {
       name: '',
-      location: ''
+      location: '',
+      date: ''
     }
   }
   
@@ -52,6 +53,17 @@ class EventsNew extends Component {
               name="location"
               placeholder="Event Location"
               value={this.state.location}
+              onChange={this.handleOnChange}
+            />
+          </label><br></br>
+          <label>
+            Date: <br></br>
+            <input
+              className="form-control"
+              type="date"
+              name="date"
+              placeholder="Event Date"
+              value={this.state.date}
               onChange={this.handleOnChange}
             />
           </label><br></br>
