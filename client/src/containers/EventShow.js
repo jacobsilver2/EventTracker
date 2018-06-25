@@ -8,9 +8,7 @@ import { deleteEvent} from '../actions'
 
 class EventShow extends Component {
 
-    // componentDidMount() {
-    //     this.props.getEvent(this.props.match.params.id)
-    // }
+    
 
     render() {
         const { event, history } = this.props;
@@ -20,9 +18,7 @@ class EventShow extends Component {
                 <h1>{event.name}</h1>
             
                 <ButtonGroup>
-                    <Button 
-                        className="btn btn-outline-danger"
-                        onClick={ () =>  deleteEvent(event.id, history) }>
+                    <Button className="btn btn-outline-danger" onClick={() => this.props.deleteEvent(event.id, history) }>
                         <span className="glyphicon glyphicon-pencil"></span> Delete Event
                     </Button>
 

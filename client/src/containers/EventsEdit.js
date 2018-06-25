@@ -20,8 +20,8 @@ handleOnChange = e => {
 
 handleOnSubmit = e => {
   e.preventDefault();
-  const { editEvent, histroy } = this.props;
-  editEvent(this.state, histroy);
+  const { editEvent, history } = this.props;
+  editEvent(this.state, history);
 }
 
 render() {
@@ -51,8 +51,6 @@ render() {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  
-  
   let event = state.events.events.find(event => event.id === +ownProps.match.params.showId)
   return {event}
 }

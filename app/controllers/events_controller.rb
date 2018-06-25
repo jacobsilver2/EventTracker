@@ -27,15 +27,19 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   def update
     if @event.update(event_params)
-      render json: @event
+      render json: @event, status: 200
     else
-      render json: @event.errors, status: :unprocessable_entity
+      render json: {message: event.errors}, status: 400
     end
   end
 
   # DELETE /events/1
   def destroy
-    @event.destroy
+    if @event.destroy
+      render json: {message: "Event Deleted"}, status: 204
+    else
+      render json: {message: event.errors}, status:400
+    end
   end
 
   private
