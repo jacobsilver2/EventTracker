@@ -13,14 +13,22 @@ import EventCard from '../components/EventCard';
 
 const EventsList = ({ events }) => {
   
-  const renderEvents = events.events.map((event) => 
+  const eventsByDate = events.events.sort(function(a,b){
+    return a.date > b.date
+  })
+  const renderEvents = eventsByDate.map((event) => 
     <EventsListItem event={event} key={event.id}/>
   )
-  const renderCards = events.events.map((event, i) => 
+  const renderCards = eventsByDate.map((event, i) => 
     <Card key={i} background={event.background}>
       <EventCard {...event}/>
     </Card> 
   )
+
+
+
+
+
 
   let cardStack;
   if (events.events.length >= 2) {
@@ -30,7 +38,7 @@ const EventsList = ({ events }) => {
   } else {
     cardStack = ''
   }
-
+  
   return (
     <div className="container">
     <div className="col d-flex justify-content-center">

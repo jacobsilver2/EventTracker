@@ -70,7 +70,7 @@ const EventCard = (props) => (
 		<div style={{color: '#fff'}}>
 			<DetailsRow
 				icon='glyphicon glyphicon-calendar'
-				title={<Moment format="dddd, MMMM Do">{props.date}</Moment>}
+				title={<Moment format="dddd, MMMM Do YYYY">{props.date}</Moment>}
         name = "Date"
 			/>
 
