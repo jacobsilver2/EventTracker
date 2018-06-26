@@ -23,7 +23,7 @@ const EventsList = ({ events }) => {
       <CardStack
         height={500}
         width={400}
-        background="#f8f8f8"
+        background="#e9e3d4"
         hoverOffset={25}>
 
         {events.events.map((event, i) => 

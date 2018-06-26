@@ -2,14 +2,18 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="footer-copyright text-center">
-      <div className="container-fluid">
+    <div style={{textAlign:'center'}}>
+      <div>
       <p></p>
       <p></p>
       <p></p>
       <p></p>
       <p></p>
-        © 2018 Copyright EventTracker
+        <footer class="blockquote-footer">
+          <small class="text-muted">
+          © 2018 Copyright EventTracker
+          </small>
+        </footer>
       </div>
     </div>
   );
