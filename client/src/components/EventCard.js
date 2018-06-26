@@ -2,6 +2,9 @@ import React from 'react';
 import ProfilePicture from './ProfilePicture'
 import DetailsRow from './DetailsRow'
 import Moment from 'react-moment';
+import { Button, ButtonGroup, Image } from 'react-bootstrap';
+import { connect } from 'react-redux';
+
 
 const styles = {
 	cardHeader: {
@@ -59,7 +62,8 @@ const EventCard = (props) => (
 			<ProfilePicture imgSrc={props.image} borderColor={props.imgBorderColor} />
 			<div>
 				<h1>{props.name}</h1>
-				<h3 className='icon ion-ios-arrow-down'>{props.title}</h3>
+				<h3>{props.title}</h3>
+
 			</div>
 		</header>
 
@@ -87,7 +91,11 @@ const EventCard = (props) => (
 				name="Notes"
 			/>
 		</div>
+		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-remove-circle"></span> Delete Event</Button>
+		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-pencil"></span> Edit Event </Button>
   </div>
 );
+
+
 
 export default EventCard;
