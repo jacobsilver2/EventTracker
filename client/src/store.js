@@ -9,13 +9,15 @@ import Errors from './reducers/errors_reducer';
 
 const reducers = combineReducers({
     events: EventsReducer,
-    form: EventsFormData,
-    errors: Errors
+    // form: EventsFormData,
+    // errors: Errors
 });
 
-// const middleware = [thunk]
+const middleware = [thunk]
+let store = createStore(reducers,   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),    //creates our store with rootReducer, preloaded state, and enhancers like chrome extension
+  applyMiddleware(...middleware)
+);
 
-export default createStore(
-    reducers,
-    applyMiddleware(thunk)
-)
+export default store;
+
+

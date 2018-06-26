@@ -26,7 +26,7 @@ export const removeEvent = event => {
 export const updateEvent = event => {
   return {
     type: 'EDIT_EVENT',
-    event
+    event: event
   }
 }
 
@@ -80,8 +80,8 @@ export const editEvent = (event, routerHistory) => {
     .then(handleErrors)
     .then(response => response.json())
     .then(event => {
+      dispatch(updateEvent(event))
       routerHistory.replace(`/events/${event.id}`)
-       dispatch(updateEvent(event))
     })
     .catch(error => {
       dispatch({type: 'error'})

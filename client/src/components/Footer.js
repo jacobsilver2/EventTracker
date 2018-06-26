@@ -9,8 +9,8 @@ const Footer = () => {
       <p></p>
       <p></p>
       <p></p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
+        <footer className="blockquote-footer">
+          <small className="text-muted">
           © 2018 Copyright EventTracker
           </small>
         </footer>

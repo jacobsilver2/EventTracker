@@ -6,16 +6,19 @@ export default (state={events: [] }, action) => {
         return {events: [...state.events, action.event]};
       case 'REMOVE_EVENT':
         // return {events: state.events.filter(event => event.id !== action.event.id)};
-        return state.filter(event => event.id !== action.eventId)
+        // console.log(state);
+        return {events: state.events.filter(event => event.id !== action.eventId)}
       case 'EDIT_EVENT':
         state.events.map((event) => {
           if (event.id === action.event.id) {
             event.name = action.event.name
             event.location = action.event.location
+            event.date = action.event.date
+            event.time = action.event.time
+            event.notes = action.event.notes
           }
-        return {...state, event: action.event};
         });
-      break;
+        return {...state, event: action.event};
       default:
         return state
     }
