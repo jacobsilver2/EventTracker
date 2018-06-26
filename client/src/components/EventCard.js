@@ -2,8 +2,7 @@ import React from 'react';
 import ProfilePicture from './ProfilePicture'
 import DetailsRow from './DetailsRow'
 import Moment from 'react-moment';
-import { Button, ButtonGroup, Image } from 'react-bootstrap';
-import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
 
 
 const styles = {

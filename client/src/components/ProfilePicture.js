@@ -8,6 +8,7 @@ const ProfilePicture = ({ imgSrc, borderColor }) => (
 			borderRadius: '100%',
 			border: `3px solid ${borderColor}`,
 		}}
+		alt="great event"
 		src={imgSrc}
 	/>
 );

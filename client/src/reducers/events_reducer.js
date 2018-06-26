@@ -15,6 +15,7 @@ export default (state={events: [] }, action) => {
           }
         return {...state, event: action.event};
         });
+      break;
       default:
         return state
     }

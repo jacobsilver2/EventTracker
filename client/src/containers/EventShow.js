@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button, ButtonGroup, Image } from 'react-bootstrap';
 import Moment from 'react-moment';
 //actions
-import { deleteEvent, editEvent} from '../actions'
+import { deleteEvent } from '../actions'
 
 class EventShow extends Component {
 
