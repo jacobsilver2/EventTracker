@@ -1,5 +1,5 @@
-// export const resetEventForm = () => {
-//     return {
-//       type: 'RESET_EVENT_FORM'
-//     }
-//   }
+export const resetEventForm = () => {
+    return {
+      type: 'RESET_EVENT_FORM'
+    }
+  }

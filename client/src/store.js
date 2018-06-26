@@ -9,8 +9,8 @@ import Errors from './reducers/errors_reducer';
 
 const reducers = combineReducers({
     events: EventsReducer,
-    // form: EventsFormData,
-    // errors: Errors
+    form: EventsFormData,
+    errors: Errors
 });
 
 const middleware = [thunk]
