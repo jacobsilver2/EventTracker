@@ -60,9 +60,8 @@ const EventCard = (props) => (
 		<header style={styles.cardHeader} className='card-header-details'>
 			<ProfilePicture imgSrc={props.image} borderColor={props.imgBorderColor} />
 			<div>
-				<h1>{props.name}</h1>
-				<h3>{props.title}</h3>
-
+				<h1 style={styles.headerName}>{props.name}</h1>
+				<h3 style={styles.headerTitle}>{props.title}</h3>
 			</div>
 		</header>
 
@@ -89,9 +88,9 @@ const EventCard = (props) => (
 				notes={props.notes}
 				name="Notes"
 			/>
-		</div>
 		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-remove-circle"></span> Delete Event</Button>
 		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-pencil"></span> Edit Event </Button>
+		</div>
   </div>
 );
 
