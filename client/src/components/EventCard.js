@@ -2,7 +2,9 @@ import React from 'react';
 import ProfilePicture from './ProfilePicture'
 import DetailsRow from './DetailsRow'
 import Moment from 'react-moment';
-import { Button } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 
 const styles = {
@@ -88,8 +90,13 @@ const EventCard = (props) => (
 				notes={props.notes}
 				name="Notes"
 			/>
-		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-remove-circle"></span> Delete Event</Button>
-		<Button className="btn btn-outline-danger"><span className="glyphicon glyphicon-pencil"></span> Edit Event </Button>
+		<ButtonGroup>
+			<Button className="btn btn-outline-danger">
+				<Link key={props.id} to={`/events/${props.id}/edit`}>
+                    <span className="glyphicon glyphicon-pencil"></span> Edit Event
+                </Link>
+			</Button>
+		</ButtonGroup>
 		</div>
   </div>
 );

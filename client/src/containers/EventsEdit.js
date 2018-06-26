@@ -75,7 +75,7 @@ render() {
             />
         </label><br></br>
         <label>
-          NOtes: <br></br>
+          Notes: <br></br>
             <input 
               className="form-control"
               type="text"

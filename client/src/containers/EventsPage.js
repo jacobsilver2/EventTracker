@@ -11,10 +11,13 @@ import EventsNew from './EventsNew'
 import EventShow from  './EventShow'
 import EventsEdit from './EventsEdit'
 //actions
-// import { getEvents} from '../actions/index'
+import { getEvents} from '../actions/index'
 
 
 class EventsPage extends Component {
+  componentDidMount() {
+    this.props.getEvents()
+  }
 
     render() {
       const { events, match } = this.props;
@@ -24,9 +27,9 @@ class EventsPage extends Component {
             <Route exact path={match.url} render={() => (
               <EventsList events={events} />
             )}/>
-          <Route path={`${match.url}/new`} component={EventsNew} />
-          <Route exact path={`${match.url}/:showId`} component={EventShow}/>
-          <Route exact path={`${match.url}/:showId/edit`} component={EventsEdit}/>
+            <Route path={`${match.url}/new`} component={EventsNew} />
+            <Route exact path={`${match.url}/:showId`} component={EventShow}/>
+            <Route exact path={`${match.url}/:showId/edit`} component={EventsEdit}/>
           </Switch>
         </div>
       )
@@ -39,4 +42,4 @@ const mapStateToProps = (state) => {
   })
 }
   
-  export default connect(mapStateToProps, null)(EventsPage);
+  export default connect(mapStateToProps, {getEvents})(EventsPage);

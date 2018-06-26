@@ -29,7 +29,7 @@ const EventsList = ({ events }) => {
         {events.events.map((event, i) => 
           <Card key={i} background={event.background}>
             <EventCard {...event}/>
-            </Card>
+          </Card>
         )} 
                      
       </CardStack>
