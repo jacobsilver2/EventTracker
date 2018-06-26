@@ -20,6 +20,8 @@ class EventShow extends Component {
                 <h1>Location: {event.location}</h1>
                 <h1>Date: <Moment format="dddd, MMMM Do">{event.date}</Moment></h1>
                 <h1>Time: <Moment format="h:mm a">{event.time}</Moment></h1>
+                <h1>Notes: {event.notes}</h1>
+
                 <Image src={event.image} width="30%" height="50%" alt="logo" rounded/> <br></br>
 
 

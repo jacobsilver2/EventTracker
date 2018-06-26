@@ -81,6 +81,11 @@ const EventCard = (props) => (
 				title={props.location}
         name = "Location"
 			/>
+			<DetailsRow 
+				icon='glyphicon glyphicon-pencil'
+				notes={props.notes}
+				name="Notes"
+			/>
 		</div>
   </div>
 );

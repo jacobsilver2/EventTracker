@@ -11,7 +11,8 @@ class EventsEdit extends Component {
       name: props.event.name,
       location: props.event.location,
       date: props.event.date,
-      time: props.event.time
+      time: props.event.time,
+      notes: props.event.notes
     }
   }
 
@@ -71,6 +72,16 @@ render() {
               type="time"
               name="time"
               value={this.state.time}
+              onChange={this.handleOnChange}
+            />
+        </label><br></br>
+        <label>
+          NOtes: <br></br>
+            <input 
+              className="form-control"
+              type="text"
+              name="notes"
+              value={this.state.notes}
               onChange={this.handleOnChange}
             />
         </label><br></br>
