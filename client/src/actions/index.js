@@ -19,7 +19,7 @@ export const addEvent = event => {
 export const removeEvent = event => {  
   return {
     type: 'REMOVE_EVENT',
-    event
+    event: event
   }
 }
 
@@ -92,12 +92,12 @@ export const editEvent = (event, routerHistory) => {
 
 export const deleteEvent = (eventId, routerHistory) => {
   return dispatch => {
-    fetch(`${api_URL}/events/${eventId}`, {
+    return fetch(`${api_URL}/events/${eventId}`, {
       method: 'DELETE',
     })
     .then(response => {
-      routerHistory.replace('/events');
       dispatch(removeEvent(eventId));
+      routerHistory.replace('/events');
     })
     .catch(error => console.log(error))
   }

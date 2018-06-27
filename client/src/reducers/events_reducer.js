@@ -1,3 +1,5 @@
+// import { BrowserRouter } from 'react-router-dom';
+
 export default (state={events: [] }, action) => {
     switch(action.type) {
       case 'GET_EVENTS':
@@ -5,9 +7,13 @@ export default (state={events: [] }, action) => {
       case 'ADD_EVENT':
         return {events: [...state.events, action.event]};
       case 'REMOVE_EVENT':
-        // return {events: state.events.filter(event => event.id !== action.event.id)};
-        // console.log(state);
-        return {events: state.events.filter(event => event.id !== action.eventId)}
+        const newState = Object.assign([], state);
+        const indexOfEventToDelete = state.events.findIndex(event => {
+          return event.id == action.event.id
+        })
+        newState.splice(indexOfEventToDelete, 1);
+        return newState;
+        // return {events: state.events.filter(event => event.id !== action.eventId)}
       case 'EDIT_EVENT':
         state.events.map((event) => {
           if (event.id === action.event.id) {
