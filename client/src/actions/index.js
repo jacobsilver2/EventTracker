@@ -36,7 +36,6 @@ export const getEvents = () => {
     return fetch(`${api_URL}/events`, {
       method: 'GET',
     })
-    .then(handleErrors)
     .then(res => res.json())
     .then(events => {
       dispatch(setEvents(events))
