@@ -75,8 +75,7 @@ const EventCard = (props) => (
 			/>
 
 			<DetailsRow
-				icon='glyphicon glyphicon-time'
-				title={<Moment format="h:mm a">{props.time}</Moment>}
+				icon='glyphicon glyphicon-time'				title={<Moment format="h:mm a">{props.time}</Moment>}
         name = "Time"
 			/>
 
