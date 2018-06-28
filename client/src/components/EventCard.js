@@ -4,7 +4,6 @@ import DetailsRow from './DetailsRow'
 import Moment from 'react-moment';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 
 const styles = {

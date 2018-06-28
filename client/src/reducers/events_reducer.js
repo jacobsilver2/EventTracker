@@ -9,7 +9,7 @@ export default (state={events: [] }, action) => {
       case 'REMOVE_EVENT':
         return {events: state.events.filter(event => event.id !== action.event)}
       case 'EDIT_EVENT':
-        state.events.map((event) => {
+        state.events.map( (event) => {
           if (event.id === action.event.id) {
             event.name = action.event.name
             event.location = action.event.location

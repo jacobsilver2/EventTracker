@@ -77,7 +77,6 @@ export const editEvent = (event, routerHistory) => {
       },
       body: JSON.stringify({event: event})
     })
-    .then(handleErrors)
     .then(response => response.json())
     .then(event => {
       dispatch(updateEvent(event))
