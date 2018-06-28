@@ -77,6 +77,7 @@ export const editEvent = (event, routerHistory) => {
       },
       body: JSON.stringify({event: event})
     })
+    .then(handleErrors)
     .then(response => response.json())
     .then(event => {
       dispatch(updateEvent(event))
@@ -103,42 +104,9 @@ export const deleteEvent = (eventId, routerHistory) => {
   }
 }
 
-function handleErrors (response) {
-  let contentType = response.headers.get('content-type')
-  if (contentType.includes('application/json')) {
-    return handleJSONResponse(response)
-  } else if (contentType.includes('text/html')) {
-    return handleTextResponse(response)
-  } else {
-    // Other response types as necessary. I haven't found a need for them yet though.
-    throw new Error(`Sorry, content-type ${contentType} not supported`)
+function handleErrors(response){
+  if (!response.ok) {
+    throw Error(response.statusText);
   }
-}
-
-function handleJSONResponse (response) {
-  return response.json()
-    .then(json => {
-      if (response.ok) {
-        return json
-      } else {
-        return Promise.reject(Object.assign({}, json, {
-          status: response.status,
-          statusText: response.statusText
-        }))
-      }
-    })
-}
-function handleTextResponse (response) {
-  return response.text()
-    .then(text => {
-      if (response.ok) {
-        return response.json
-      } else {
-        return Promise.reject({
-          status: response.status,
-          statusText: response.statusText,
-          err: text
-        })
-      }
-    })
+  return response;
 }
