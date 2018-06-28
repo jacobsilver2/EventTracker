@@ -7,17 +7,7 @@ export default (state={events: [] }, action) => {
       case 'ADD_EVENT':
         return {events: [...state.events, action.event]};
       case 'REMOVE_EVENT':
-<<<<<<< HEAD
         return {events: state.events.filter(event => event.id !== action.event)}
-=======
-        const newState = Object.assign([], state);
-        const indexOfEventToDelete = state.events.findIndex(event => {
-          return event.id == action.event.id
-        })
-        newState.splice(indexOfEventToDelete, 1);
-        return newState;
-        // return {events: state.events.filter(event => event.id !== action.eventId)}
->>>>>>> e9f1e8e66f4c5f0cfb85795936abf1dbb622969e
       case 'EDIT_EVENT':
         state.events.map((event) => {
           if (event.id === action.event.id) {
