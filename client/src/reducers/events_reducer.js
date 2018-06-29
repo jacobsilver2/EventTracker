@@ -11,15 +11,15 @@ export default (state={events: [] }, action) => {
       case 'EDIT_EVENT':
         state.events.map( (event) => {
           if (event.id === action.event.id) {
-            event.name = action.event.name
-            event.location = action.event.location
-            event.date = action.event.date
-            event.time = action.event.time
-            event.notes = action.event.notes
+            event.name = action.event.name;
+            event.location = action.event.location;
+            event.date = action.event.date;
+            event.time = action.event.time;
+            event.notes = action.event.notes;
           }
         });
         return {...state, event: action.event};
       default:
         return state
     }
-  }
+  }  }

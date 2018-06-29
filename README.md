@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Clone this repo, cd into the directory, and do a bundle install as well as an npm install.
+PLEASE NOTE: you might encounter an error while doing the NPM install.  This is because there is a syntax error in one of my dependencies, react-cardstack.  In order to fix this, please go to:
+'./client/node_modules/react-cardstact/dist/index.js' and replace the line:
 
-Things you may want to cover:
+var _Cardstack = _interopRequireDefault(require("./Cardstack"));
 
-* Ruby version
+with:
 
-* System dependencies
+var _Cardstack = _interopRequireDefault(require("./CardStack"));
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then run rake start and make some events!
