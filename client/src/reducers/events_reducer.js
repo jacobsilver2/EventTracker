@@ -22,4 +22,5 @@ export default (state={events: [] }, action) => {
       default:
         return state
     }
-  }  }
+  }
+
