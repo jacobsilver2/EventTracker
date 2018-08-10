@@ -12,6 +12,8 @@ with:
 ## Usage 
 The header contains the EVENTS menu, as well as ADD EVENT.  From there you can choose to add an event or view your events.  You have the ability to edit and delete events within the EVENTS view.  
 
+![EventTracker Screenshot](./EventTrackerSceenShot.png "EventTracker Screenshot")
+
 ## Tech/Framework Used
 This app was made with a Rails 5 (api mode) backend, with a React front-end with Redux to manage global state.
 
