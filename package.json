@@ -1,5 +1,8 @@
 {
   "name": "eventtracker",
+  "engines": {
+    "node": "10.4.1"
+  },
   "version": "1.0.0",
   "description": "A React/Redux app with Rails backend to manage event creation",
   "main": "index.js",
