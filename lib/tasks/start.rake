@@ -1,8 +1,3 @@
-# task :start do
-#     desc 'Start dev server'
-#     exec 'foreman start -p 3000'
-# end
-
 namespace :start do
     desc 'Start dev server'
     task :development do
@@ -11,7 +6,7 @@ namespace :start do
 
     desc 'Start production server'
     task :production do
-        exec 'NPM_CONFIG_PRODUCTION=true npm run postinstall && foreman start'
+        exec 'NPM_CONFIG_PRODUCTION=true npm run postinstall && foreman start -p 3000'
     end
 end
 task :start => 'start:development'
