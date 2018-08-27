@@ -1,0 +1,25 @@
+{
+  "name": "eventtracker",
+  "version": "1.0.0",
+  "description": "A React/Redux app with Rails backend to manage event creation",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'client built'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobsilver2/EventTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobsilver2/EventTracker/issues"
+  },
+  "homepage": "https://github.com/jacobsilver2/EventTracker#readme"
+}
