@@ -1,7 +1,7 @@
 //dependencies
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { CardStack, Card } from 'react-cardstack';
+import { CardStack, Card } from './CardStack/index';
 import { connect } from 'react-redux';
 //containers
 import EventShow from '../containers/EventShow'
