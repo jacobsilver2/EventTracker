@@ -1,6 +1,7 @@
 import { resetEventForm } from './eventForm';
 // import runtimeEnv from '@mars/heroku-js-runtime-env'
 // const api_URL = runtimeEnv().REACT_APP_API_URL
+import fetch from 'isomorphic-fetch'
 
 //Event Action Creators
 export const setEvents = events => {
