@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
 import Footer from './Footer'
+import runtimeEnv from '@mars/heroku-js-runtime-env'
 
 //css
 import './App.css';
@@ -19,7 +20,11 @@ import {getEvents} from '../actions/index'
 class App extends Component {
 
   componentDidMount() {
-    this.props.getEvents()
+    this.props.getEvents();
+    const url = runtimeEnv().REACT_APP_API_URL
+    fetch(url)
+    .then( res => res.json() )
+    .then( json => console.log(json) )
   }
 
   render() {
