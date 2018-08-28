@@ -47,7 +47,7 @@ export const getEvents = () => {
 
 export const createEvent = (event, routerHistory) => {
   return dispatch => {
-    return fetch(`api/`, {
+    return fetch(`api/events`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
