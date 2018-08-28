@@ -1,6 +1,6 @@
 import { resetEventForm } from './eventForm';
-import runtimeEnv from '@mars/heroku-js-runtime-env'
-const api_URL = runtimeEnv().REACT_APP_API_URL
+// import runtimeEnv from '@mars/heroku-js-runtime-env'
+// const api_URL = runtimeEnv().REACT_APP_API_URL
 
 //Event Action Creators
 export const setEvents = events => {
@@ -48,7 +48,7 @@ export const getEvents = () => {
 export const createEvent = (event, routerHistory) => {
   // debugger;
   return dispatch => {
-    return fetch(`${api_URL}/events`, {
+    return fetch(`api/events`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ export const createEvent = (event, routerHistory) => {
 
 export const editEvent = (event, routerHistory) => {
    return dispatch => {
-    return fetch(`${api_URL}/events/${event.id}`, {
+    return fetch(`api/events/${event.id}`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json'
@@ -92,7 +92,7 @@ export const editEvent = (event, routerHistory) => {
 
 export const deleteEvent = (eventId, routerHistory) => {
   return dispatch => {
-    return fetch(`${api_URL}/events/${eventId}`, {
+    return fetch(`api/events/${eventId}`, {
       method: 'DELETE',
     })
     .then(handleErrors)
