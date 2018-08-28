@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
 import Footer from './Footer'
 import runtimeEnv from '@mars/heroku-js-runtime-env'
-
+import fetch from 'isomorphic-fetch'
 //css
 import './App.css';
 // components
