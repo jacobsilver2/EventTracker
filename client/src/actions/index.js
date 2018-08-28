@@ -34,7 +34,7 @@ export const updateEvent = event => {
 // Events Async Actions
 export const getEvents = () => {
   return dispatch => {
-    return fetch(`api/events`, {
+    return fetch('api/events', {
       method: 'GET',
     })
     .then(res => res.json())
@@ -47,7 +47,7 @@ export const getEvents = () => {
 
 export const createEvent = (event, routerHistory) => {
   return dispatch => {
-    return fetch(`api/events`, {
+    return fetch('api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
