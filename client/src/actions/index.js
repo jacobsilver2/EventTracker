@@ -35,7 +35,8 @@ export const updateEvent = event => {
 // Events Async Actions
 export const getEvents = () => {
   return dispatch => {
-    return fetch('api/events', {
+    const url = 'api/events'
+    return fetch(url, {
       method: 'GET',
     })
     .then(res => res.json())
