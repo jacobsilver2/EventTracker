@@ -22,7 +22,8 @@ module EventManager
     config.load_defaults 5.1
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins /\Ahttp:\/\/localhost:\d+\z/
+        # /\Ahttp:\/\/localhost:\d+\z/, 
+        origins 'http://localhost:3000', 'https://desolate-waters-78828.herokuapp.com/'
         resource '*', headers: :any, methods: :any
       end
     end
